@@ -44,7 +44,12 @@ class TicTacToe
   		end
   		display_board
 	end
-
+  
+  def input_to_index(move)
+     index = move.to_i - 1 # Declares the index variable, changes it to an integer and -1 to correspond to the array indexes
+     index
+  end
+  
 	def turn_count
 		turn = 0
 		@board.each do |mark|
