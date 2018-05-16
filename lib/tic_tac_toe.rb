@@ -54,6 +54,7 @@ class TicTacToe
       puts "invalid, try again"
       turn
     end
+    display_board
   end
 
   def turn_count
