@@ -48,8 +48,8 @@ class TicTacToe
     puts "Your turn"
     input = gets.strip
     index = input_to_index(input)
-    if valid_move?(input) == true
-      move(input.to_i, current_player)
+    if valid_move?(index) == true
+      move(index, current_player)
     else 
       puts "invalid, try again"
       turn
