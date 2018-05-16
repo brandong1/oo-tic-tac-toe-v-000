@@ -148,7 +148,7 @@
   end
   
   def play
-    turn
+    turn(index)
     while won? == false
         over?
         full?
