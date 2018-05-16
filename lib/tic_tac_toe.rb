@@ -71,8 +71,8 @@
   
   def turn_count
     counter = 0
-    @board.each do |turn|
-      if turn == "X" || turn == "O"
+    @board.each do |token|
+      if token == "X" || token == "O"
         counter += 1 
       end 
     end
@@ -80,14 +80,14 @@
   end
   
   def current_player
-    turn = "X"
+    token = "X"
     if turn_count % 2 == 0 
       puts "X" 
-       turn
+       token
     else
-      turn = "O"
+      token = "O"
       puts "O"
-      turn
+      token
     end 
   end
   
@@ -148,11 +148,12 @@
   end
   
   def play(index)
-    turn(index)
-    draw?(index)
-    while won?(index) == false
-        over?(index)
-        full?(index)
+    until won? == true
+      turn?
+    end
+    if won? == true
+      puts "Congratulations #{token}"
+    
        
       end 
   
