@@ -149,10 +149,11 @@
   
   def play(index)
     turn(index)
+    draw?(index)
     while won?(index) == false
         over?(index)
         full?(index)
-        draw?(index)
+       
       end 
   
   end 
