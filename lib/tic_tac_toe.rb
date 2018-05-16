@@ -22,8 +22,11 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
-  #spec problems: position is ambiguous
-
+  def input_to_index(move)
+     index = move.to_i - 1 # Declares the index variable, changes it to an integer and -1 to correspond to the array indexes
+     index
+  end
+  
   def move(position, token = "X")
     @board[position - 1] = token
   end
