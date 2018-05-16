@@ -80,8 +80,7 @@ class TicTacToe
 		@board.each_index do |position|
 			if !position_taken?(position)
 				false
-				break
-
+				
 			else
 				true
 			end
@@ -110,7 +109,7 @@ class TicTacToe
 	end
 
 	def winner
-		if won?
+		if won?(current_player)
 			if @board[won?[0]] == "O"
 				return "O"
 			else
