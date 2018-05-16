@@ -78,7 +78,7 @@ class TicTacToe
 
 	def full?
 		@board.each_index do |position|
-			if !position_taken?(position.to_i)
+			if !position_taken?(position)
 				false
 				break
 
