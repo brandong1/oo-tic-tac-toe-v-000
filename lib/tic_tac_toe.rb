@@ -148,7 +148,7 @@
   end
   
   def play
-    turn(input)
+    turn
     while won? == false
         over?
         full?
