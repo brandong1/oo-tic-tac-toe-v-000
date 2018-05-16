@@ -147,7 +147,7 @@
     end
   end
   
-  def play
+  def play(index)
     turn(index)
     while won? == false
         over?
