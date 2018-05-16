@@ -44,14 +44,14 @@ class TicTacToe
     display_board
   end
 
-  def turn(input)
+  def turn
     puts "Your turn"
     input = gets.strip
     if valid_move?(input) == true
       move(input.to_i, current_player)
     else 
       puts "invalid, try again"
-      turn(input)
+      turn
     end
   end
 
